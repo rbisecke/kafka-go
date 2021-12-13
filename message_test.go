@@ -11,10 +11,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/segmentio/kafka-go/compress/gzip"
-	"github.com/segmentio/kafka-go/compress/lz4"
-	"github.com/segmentio/kafka-go/compress/snappy"
-	"github.com/segmentio/kafka-go/compress/zstd"
+	"github.com/rbisecke/kafka-go/compress/gzip"
+	"github.com/rbisecke/kafka-go/compress/lz4"
+	"github.com/rbisecke/kafka-go/compress/snappy"
+	"github.com/rbisecke/kafka-go/compress/zstd"
 	"github.com/stretchr/testify/require"
 )
 
@@ -742,7 +742,7 @@ func (r *readerHelper) readMessageErr() (msg Message, err error) {
 		return
 	}
 	msg.Offset = r.offset
-	msg.Time = time.Unix(timestamp / 1000, (timestamp % 1000) * 1000000)
+	msg.Time = time.Unix(timestamp/1000, (timestamp%1000)*1000000)
 	msg.Headers = headers
 	return
 }

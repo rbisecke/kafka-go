@@ -3,8 +3,8 @@ package txnoffsetcommit_test
 import (
 	"testing"
 
-	"github.com/segmentio/kafka-go/protocol/prototest"
-	"github.com/segmentio/kafka-go/protocol/txnoffsetcommit"
+	"github.com/rbisecke/kafka-go/protocol/prototest"
+	"github.com/rbisecke/kafka-go/protocol/txnoffsetcommit"
 )
 
 func TestTxnOffsetCommitRequest(t *testing.T) {

@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	ktesting "github.com/segmentio/kafka-go/testing"
+	ktesting "github.com/rbisecke/kafka-go/testing"
 )
 
 func TestClientAddPartitionsToTxn(t *testing.T) {

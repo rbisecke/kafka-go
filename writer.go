@@ -10,7 +10,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	metadataAPI "github.com/segmentio/kafka-go/protocol/metadata"
+	metadataAPI "github.com/rbisecke/kafka-go/protocol/metadata"
 )
 
 // The Writer type provides the implementation of a producer of kafka messages
@@ -941,7 +941,7 @@ func newBatchQueue(initialSize int) batchQueue {
 	bq := batchQueue{
 		queue: make([]*writeBatch, 0, initialSize),
 		mutex: &sync.Mutex{},
-		cond: &sync.Cond{},
+		cond:  &sync.Cond{},
 	}
 
 	bq.cond.L = bq.mutex

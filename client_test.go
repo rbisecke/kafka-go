@@ -9,8 +9,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/segmentio/kafka-go/compress"
-	ktesting "github.com/segmentio/kafka-go/testing"
+	"github.com/rbisecke/kafka-go/compress"
+	ktesting "github.com/rbisecke/kafka-go/testing"
 )
 
 func newLocalClientAndTopic() (*Client, string, func()) {
